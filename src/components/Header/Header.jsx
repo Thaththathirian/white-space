@@ -1,5 +1,5 @@
 import React from "react";
-import "./Header.css";
+import "./header.css";
 import { IoIosArrowDown } from "react-icons/io";
 import CustomBtn from "../CustomBtn";
 
