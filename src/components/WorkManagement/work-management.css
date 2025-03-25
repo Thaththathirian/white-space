@@ -1,0 +1,65 @@
+.work-management {
+  height: 1370px;
+  font-family: var(--inter-font);
+  color: var(--black-color);
+  margin-left: 32px;
+  margin-right: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* gap: 100px; */
+  align-content: center;
+}
+.project-management {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-height: 450px;
+}
+.project-management h1 {
+  width: 100%;
+  max-width: 500px;
+}
+.project-management-details {
+  max-width: 657px;
+  height: 410;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.project-management-blank {
+  height: 448px;
+  width: 719px;
+  background-color: var(--light-blue-color);
+  flex-grow: 1;
+  min-width: 300px;
+}
+
+/* 2nd content */
+.work-together {
+  height: 540px;
+  display: flex;
+  gap: 160px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.work-together-map {
+  /* width: 583px; */
+  background-color: var(--light-blue-color);
+  flex: 1;
+  min-width: 280px;
+}
+.work-together-content {
+  /* width: 633px; */
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}

@@ -1,0 +1,81 @@
+header {
+  height: 92px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 32px;
+  margin-right: 32px;
+}
+header > div:first-child {
+  display: flex;
+  /* align-items: center; */
+  gap: 10px;
+  width: 191px;
+  height: 34px;
+  align-self: center;
+}
+header > div:first-child img {
+  /* width: 37px;
+  height: 29px; */
+}
+header > div:first-child h3 {
+  /* width: 144px;
+  height: 34px; */
+  font-size: 28px;
+}
+header .list-and-btn {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+}
+header ul {
+  display: flex;
+  align-items: center;
+  font-family: var(--dm-sans-font);
+  gap: 20px;
+}
+header .icon-style {
+  display: flex;
+  align-self: center;
+}
+header ul li {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+}
+
+header .header-btn {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+/* header .header-btn button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+
+}  */
+/* header .header-btn button:first-child {
+  width: 126px;
+  background-color: var(--yellow-color);
+  color: var(--dark-blue-color);
+}
+
+header .header-btn button:last-child {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  width: 227px;
+  height: 60px;
+  background-color: var(--blue-color);
+  color: var(--white-color);
+}*/
+
+@media (max-width: 320px) {
+  header > div:first-child {
+    width: 7.44rem; /* 134px */
+    height: 1.33rem; /* 24px */
+}
+}

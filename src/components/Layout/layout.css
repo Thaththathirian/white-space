@@ -1,0 +1,27 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+}
+
+.layout1 {
+  background-color: var(--dark-blue-color);
+  color: var(--white-color);
+  font-family: var(--inter-font);
+}
+
+.layout2 {
+  background-color: var(--white-color);
+}
+
+.layout3  {
+  background-color: var(--dark-blue-color);
+}
+
+.layout6 {
+  background-color: var(--dark-blue-color);
+}
+
+.layout7 {
+  
+}

@@ -1,0 +1,106 @@
+.pricing-container {
+  display: grid;
+  /* gap: 60px; */
+  align-content: space-evenly;
+  height: 1270px;
+  /* background: linear-gradient(180deg, #f0f4f8, #d9e2ec); */
+  margin-left: 32px;
+  margin-right: 32px;
+  color: var(--black-color);
+}
+
+/* pricing header */
+.pricing-header {
+  display: grid;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  height: 170px;
+  text-align: center;
+}
+
+.pricing-subtitle {
+  width: 90%;
+  align-self: center;
+  margin: 0 auto;
+  text-align-last: center;
+}
+
+/* Pricing Grid */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  gap: 32px;
+  width: 100%;
+  flex-wrap: wrap;
+  height: 760px;
+}
+
+.pricing-card {
+  height: 655px;
+  border-radius: 10px;
+  border: 1px solid var(--yellow-color);
+  padding: 44px;
+  transition: transform 0.3s ease-in-out;
+  display: grid;
+  gap: 15px;
+}
+
+.pricing-card:hover {
+  /* transform: scale(1.01); */
+  /* height: 100%; */
+  background-color: var(--dark-blue-color);
+  color: var(--white-color);
+}
+.pricing-card:hover .plan-button {
+  color: var(--white-color);
+  background-color: var(--blue-color);
+  border: 1px solid var(--blue-color);
+}
+.pricing-card:hover .plan-price {
+  color: var(--yellow-color);
+}
+/* Plan Name */
+.plan-name {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Plan Price */
+.plan-price {
+  font-size: 1.5rem;
+}
+.plan-title {
+  font-weight: 500;
+  text-wrap: nowrap;
+}
+
+/* Features List */
+.plan-features {
+  list-style: none;
+  display: grid;
+  gap: 28px;
+}
+
+.plan-features li {
+  /* padding: 5px 0; */
+  font-size: 16px;
+}
+
+/* Button */
+.plan-button {
+  color: var(--black-color);
+  border: none;
+  font-size: 0.9rem;
+  width: 160px;
+  height: 50px;
+  border: 1px solid var(--yellow-color);
+  transition: all 0.3s ease-in-out;
+  margin-top: 5px;
+}
+
+.plan-button:hover {
+  background: var(--blue-color);
+  color: var(--white-color);
+}
