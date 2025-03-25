@@ -13,10 +13,7 @@ header > div:first-child {
   height: 34px;
   align-self: center;
 }
-header > div:first-child img {
-  /* width: 37px;
-  height: 29px; */
-}
+
 header > div:first-child h3 {
   /* width: 144px;
   height: 34px; */
