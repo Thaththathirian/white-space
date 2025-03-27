@@ -55,7 +55,7 @@
 
 .footer-about {
   margin-top: 8px;
-  color: var(--light-text);
+  /* color: var(--light-text); */
 }
 
 /* Middle Section - Links */
@@ -84,7 +84,7 @@
 
 .footer-link {
   display: block;
-  color: var(--light-text);
+  color: var(--white-color);
   text-decoration: none;
 }
 
@@ -100,7 +100,7 @@
 
 .cta-text {
   margin-top: 8px;
-  color: var(--light-text);
+  /* color: var(--light-text); */
 }
 
 .cta-button {
