@@ -3,40 +3,34 @@ import "./layout.css";
 import Header from "../Header/Header";
 import HeroSection from "../Section/HeroSection";
 import WorkManagement from "../WorkManagement/WorkManagement";
-import Extension from "../ExtensionAndCustomize/Extension";
-import Customization from "../ExtensionAndCustomize/Customization";
+import ExtensionAndCustomize from "../ExtensionAndCustomize/ExtensionAndCustomize";
 import Pricing from "../Pricing/Pricing";
 import YourWork from "../YourWork/YourWork";
 import YourData from "../YourData/YourData";
+import Footer from "../Footer/Footer";
+import FreeTrial from "../FreeTrial/FreeTrial";
+import Apps from "../Apps/Apps";
+import Sponsors from "../Sponsors/Sponsors";
+import Testimonial from "../Testimonial/Testimonial";
 
 const Layout = () => {
   return (
-    <div className="container grid">
-      <div className="spiral">
-        <div className="layout1">
-          <Header />
-          <HeroSection />
-        </div>
-      </div>
-      <div className="layout2">
-        <WorkManagement />
-      </div>
-      <div className="layout3">
-        <Extension />
-      </div>
-      <div className="layout4">
-        <Customization />
-      </div>
-      <div className="layout5">
-        <Pricing />
-      </div>
-      <div className="layout6">
-        <YourWork />
-      </div>
-      <div className="layout7">
-        <YourData/>
-      </div>
-    </div>
+    <>
+      <Header />
+      <HeroSection />
+      <WorkManagement />
+      <ExtensionAndCustomize />
+      <Pricing />
+      <YourWork />
+      <YourData />
+      <Sponsors />
+
+      <Apps />
+
+      {/* <Testimonial /> */}
+      <FreeTrial />
+      <Footer />
+    </>
   );
 };
 

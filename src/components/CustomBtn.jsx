@@ -9,7 +9,7 @@ const CustomBtn = ({ text, showArrow = true, BgColor = "var(--blue-color)", colo
       onClick={onClick}
     >
       {text}
-      {showArrow && <HiArrowSmallRight className="icon-style" />}
+      {showArrow && <HiArrowSmallRight className="cb-icon-style" />}
     </button>
   );
 };

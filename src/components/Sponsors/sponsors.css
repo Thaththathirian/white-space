@@ -1,0 +1,79 @@
+.sponsors {
+  height: 530px;
+  padding: 140px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--black-color);
+
+}
+.sponsors-title {
+  text-align: center;
+  /* margin-bottom: 100px; */
+  
+}
+.sponsors-icon {
+  width: 55px;
+  height: 70px;
+}
+.sponsors-company {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sponsor-microsoft {
+  display: flex;
+  width: 280px;
+  height: 60px;
+  align-items: center;
+}
+.sponsor-slack {
+  width: 280px;
+  height: 70px;
+}
+.sponsor-google {
+  width: 210px;
+  height: 70px;
+}
+.sponsor-google {
+  width: 210px;
+  height: 60px;
+}
+
+@media (max-width: 1152px) {
+  .sponsors {
+    height: 1010px;
+    display: grid;
+    justify-content: center;
+    /* justify-content: flex-start; */
+  }
+  .sponsors-title {
+    font-size: 64px;
+  }
+  .sponsors-company {
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
+    gap: 4rem;
+  }
+
+}
+@media (max-width: 768px) {
+  .sponsors {
+    height: 1010px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .sponsors-title {
+    font-size: 54px;
+  }
+}
+@media (max-width: 480px) {
+  .sponsors {
+    height: 810px;
+    padding: 80px 16px;
+  }
+  .sponsors-title {
+    font-size: 36px;
+  }
+}

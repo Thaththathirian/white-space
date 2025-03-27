@@ -1,23 +1,17 @@
 import React from "react";
-import "./your-data.css";
-import CustomBtn from "../CustomBtn";
+import CustomSection from "../CustomSection";
 
 const YourData = () => {
   return (
-    <div className="your-data">
-      <div className="project-management">
-        <div className="project-management-details">
-          <h1>Project Management</h1>
-          <p>
-            Images, videos, PDFs and audio files are supported. Create math
-            expressions and diagrams directly from the app. Take photos with the
-            mobile app and save them to a note.
-          </p>
-          <CustomBtn text="Get Started" />
-        </div>
-        <div className="project-management-blank"></div>
-      </div>
-    </div>
+    <>
+      <CustomSection
+        title="100% your data"
+        description="The app is open source and your notes are saved to an open format, so you'll always have access to them. Uses End-To-End Encryption (E2EE) to secure your notes and ensure no-one but yourself can access them."
+        buttonText="Read more"
+        backgroundColor = "var(--white-color)"
+        textColor="var(--black-color)"
+      />
+    </>
   );
 };
 
