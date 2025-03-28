@@ -8,8 +8,8 @@
   --blue-color: #4f9cf9;
   --dark-blue-color: #043873;
   --light-blue-color: #a7cefc;
-  --line-color: #2E4E73;
-  --footer-text-color: #F7F7EE;
+  --line-color: #2e4e73;
+  --footer-text-color: #f7f7ee;
   --light-text: #cbd5e1;
 
   /* font */
@@ -159,5 +159,36 @@ body {
 @media (max-width: 480px) {
   body {
     scroll-padding-top: 55px;
+  }
+}
+
+/* optimizations */
+/* Global smooth transitions */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* .smooth-wrapper {
+  will-change: transform;
+} */
+
+.smooth-wrapper.resizing * {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Performance optimizations */
+@media (prefers-reduced-motion: no-preference) {
+  .smooth-scroll {
+    scroll-behavior: smooth;
   }
 }

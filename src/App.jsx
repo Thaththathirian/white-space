@@ -1,11 +1,13 @@
+import { BrowserRouter } from "react-router-dom";
 import "./App.css";
-import Layout1 from "./components/Layout/Layout";
+import Layout from "./components/Layout/Layout";
+import SmoothResizeScrollWrapper from "./components/common/SmoothResizeScrollWrapper";
 
 function App() {
   return (
-    <>
-      <Layout1 />
-    </>
+    <SmoothResizeScrollWrapper>
+      <Layout />
+    </SmoothResizeScrollWrapper>
   );
 }
 

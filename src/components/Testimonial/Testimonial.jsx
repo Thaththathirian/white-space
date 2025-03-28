@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./testimonial.css";
-import { BiPlanet, BiSolidQuoteLeft } from "react-icons/bi";
-import { motion, AnimatePresence } from "framer-motion";
+import { BiSolidQuoteLeft } from "react-icons/bi";
 import PaginationDots from "../common/PaginationDots";
 
 const testimonials = [
@@ -33,7 +32,7 @@ const Testimonial = () => {
   const [visibleCount, setVisibleCount] = useState(3);
 
   const updateVisibleCount = () => {
-    if (window.innerWidth >= 1024) setVisibleCount(3);
+    if (window.innerWidth >= 1152) setVisibleCount(3);
     else if (window.innerWidth >= 768) setVisibleCount(2);
     else setVisibleCount(1);
   };
@@ -48,43 +47,44 @@ const Testimonial = () => {
     setCurrentIndex(index * visibleCount);
   };
 
-  const totalGroups = Math.ceil(testimonials.length / visibleCount);
+  // const totalGroups = Math.ceil(testimonials.length / visibleCount);
 
   return (
     <div className="testimonial">
       <h1 className="testimonial-title">What Our Clients Says</h1>
-      
+
       <div className="testimonial-container">
         <div className="testimonial-wrapper">
           {testimonials
-            .slice(currentIndex, currentIndex + visibleCount)
+            // .slice(currentIndex, currentIndex + visibleCount)
             .map((item, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
                 className="testimonial-card"
               >
+                <div className="testimonial-quote-icon">
+
                 <BiSolidQuoteLeft className="quote-icon" />
+                </div>
                 <p className="testimonial-text">{item.comment}</p>
-                <div className="divider"></div>
+                <div className="divider-line"></div>
                 <div className="client-details">
-                  <img src={item.profile} alt={item.name} />
+                  <img src={item.profile} alt={item.name} className="client-image"/>
                   <div className="client-info">
                     <h5>{item.name}</h5>
                     <p>{item.designation}</p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
         </div>
-
-        <PaginationDots
-          totalSlides={totalGroups}
-          currentSlide={Math.floor(currentIndex / visibleCount)}
-          onDotClick={handleDotClick}
-        />
+      <PaginationDots
+        totalSlides={testimonials.length}
+        currentSlide={Math.floor(currentIndex / visibleCount)}
+        onDotClick={handleDotClick}
+        className="testimonial-pagination"
+        dotSize="12px"
+      />
       </div>
     </div>
   );

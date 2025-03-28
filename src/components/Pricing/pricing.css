@@ -85,6 +85,7 @@
 .pricing-card.active .plan-button {
   background-color: var(--blue-color);
   color: var(--white-color);
+  border: 1px solid var(--blue-color);
 }
 
 /* Plan Details */

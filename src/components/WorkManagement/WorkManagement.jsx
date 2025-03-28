@@ -1,5 +1,7 @@
 import React from "react";
 import CustomSection from "../common/CustomSection";
+import CircleAnimation from "../common/CircleAnimation";
+import './work-management.css'
 
 const WorkManagement = () => {
   return (
@@ -10,6 +12,7 @@ const WorkManagement = () => {
         buttonText="Get Started"
         backgroundColor="var(--white-color)"
         textColor="var(--black-color)"
+        customClassName="project-management"
       />
       <CustomSection
         title="Work together"
@@ -18,6 +21,9 @@ const WorkManagement = () => {
         backgroundColor="var(--white-color)"
         textColor="var(--black-color)"
         imageOnRight={false}
+        imageComponent={<CircleAnimation/>}
+        imageBackgroundColor="var(--white-color)"
+        customClassName="work-together"
       />
     </>
   );

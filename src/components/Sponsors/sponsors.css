@@ -5,21 +5,18 @@
   flex-direction: column;
   justify-content: space-between;
   color: var(--black-color);
-
 }
 .sponsors-title {
   text-align: center;
-  /* margin-bottom: 100px; */
-  
-}
-.sponsors-icon {
-  width: 55px;
-  height: 70px;
 }
 .sponsors-company {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.apple-icon {
+  width: 55px;
+  height: 70px;
 }
 .sponsor-microsoft {
   display: flex;
@@ -35,10 +32,6 @@
   width: 210px;
   height: 70px;
 }
-.sponsor-google {
-  width: 210px;
-  height: 60px;
-}
 
 @media (max-width: 1152px) {
   .sponsors {
@@ -53,7 +46,6 @@
     justify-content: space-between;
     gap: 4rem;
   }
-
 }
 @media (max-width: 768px) {
   .sponsors {
@@ -66,5 +58,19 @@
   .sponsors {
     height: 810px;
     padding: 80px 16px;
+  }
+  .sponsor-microsoft {
+    display: flex;
+    width: 200px;
+    height: 45px;
+    align-items: center;
+  }
+  .sponsor-slack {
+    width: 190px;
+    height: 45px;
+  }
+  .sponsor-google {
+    width: 140px;
+    height: 45px;
   }
 }

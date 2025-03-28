@@ -1,0 +1,184 @@
+:root {
+  --circle-size: min(50vw, 50vh);
+  --min-circle-size: 330px;
+  --dot-size: clamp(25px, 4vw, 35px);
+}
+
+.dots-circle-container {
+  position: relative;
+  width: var(--circle-size);
+  height: var(--circle-size);
+  min-width: var(--min-circle-size);
+  min-height: var(--min-circle-size);
+  margin: 5vh auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-path {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-width: var(--min-circle-size);
+  min-height: var(--min-circle-size);
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.dots-center-logo {
+  position: absolute;
+  width: 15%;
+  max-width: 50px;
+  box-shadow: 10px 0 25px -5px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.dots-center-logo img {
+  width: 100%;
+  height: auto;
+}
+
+.dots {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.dot {
+  position: absolute;
+  width: var(--dot-size);
+  height: var(--dot-size);
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+
+
+/*  */
+.circles-container {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Circle positions and sizes */
+.circle-1 {
+  width: 200px;
+  height: 200px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 200, 200, 0.2);
+}
+
+.circle-2 {
+  width: 200px;
+  height: 200px;
+  top: 50px;
+  left: 25%;
+  background-color: rgba(200, 255, 200, 0.2);
+}
+
+.circle-3 {
+  width: 200px;
+  height: 200px;
+  top: 50px;
+  left: 55%;
+  background-color: rgba(200, 200, 255, 0.2);
+}
+
+/* Logos in non-intersected areas */
+.circle-logo {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-1 .circle-logo {
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.circle-2 .circle-logo {
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+}
+
+.circle-3 .circle-logo {
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+}
+
+.circle-logo img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Central Logo */
+.center-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.center-logo img {
+  width: 70%;
+  height: auto;
+}
+
+/* spiral lines */
+.spiral-svg {
+  width: 100%;
+  height: auto;
+}
+
+.spiral-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 3s ease-in-out forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .spiral-svg {
+    width: 100%;
+    height: 200px;
+  }
+}

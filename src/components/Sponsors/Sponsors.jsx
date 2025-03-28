@@ -8,7 +8,7 @@ const Sponsors = () => {
     <div className="sponsors">
       <h1 className="sponsors-title">Our sponsors</h1>
       <div className="sponsors-company">
-        <FaApple className="sponsors-icon" />
+        <FaApple className="apple-icon" />
         <img
           src="/assets/Microsoft.png"
           alt="Microsoft icon"

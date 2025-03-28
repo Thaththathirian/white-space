@@ -24,10 +24,8 @@ const Layout = () => {
       <YourWork />
       <YourData />
       <Sponsors />
-
       <Apps />
-
-      {/* <Testimonial /> */}
+      <Testimonial />
       <FreeTrial />
       <Footer />
     </>
