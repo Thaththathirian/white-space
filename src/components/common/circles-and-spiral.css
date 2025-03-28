@@ -1,6 +1,6 @@
 :root {
   --circle-size: min(50vw, 50vh);
-  --min-circle-size: 330px;
+  --min-circle-size: 300px;
   --dot-size: clamp(25px, 4vw, 35px);
 }
 
