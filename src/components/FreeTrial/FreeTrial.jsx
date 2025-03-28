@@ -1,6 +1,6 @@
 import React from "react";
 import "./free-trial.css";
-import CustomBtn from "../CustomBtn";
+import CustomBtn from "../common/CustomBtn";
 import { FaApple, FaWindows } from "react-icons/fa";
 import { IoLogoAndroid } from "react-icons/io";
 

@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import "./pricing.css";
 import debounce from "lodash.debounce";
 import { TiTick } from "react-icons/ti";
+import PaginationDots from "../common/PaginationDots";
+import HighlightedText from "../common/HighlightedText";
 
 const Pricing = () => {
   const [activeCard, setActiveCard] = useState("Personal");
@@ -124,7 +126,7 @@ const Pricing = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
       >
-        <h1>Choose Your Plan</h1>
+        <h1>Choose <HighlightedText>Your Plan</HighlightedText></h1>
         <p>
           Whether you want to get organized, keep your personal life on track,
           or boost workplace productivity, we have the right plan for you.
@@ -203,15 +205,11 @@ const Pricing = () => {
 
       {/* pagination*/}
       {windowWidth <= 480 && (
-        <div className="pagination-dots">
-          {plans.map((_, index) => (
-            <button
-              key={index}
-              className={`dot ${currentSlide === index ? "active" : ""}`}
-              onClick={() => goToSlide(index)}
-            />
-          ))}
-        </div>
+        <PaginationDots
+          totalSlides={plans.length}
+          currentSlide={currentSlide}
+          onDotClick={goToSlide}
+        />
       )}
     </section>
   );

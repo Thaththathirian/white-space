@@ -1,4 +1,5 @@
 import React from "react";
+import "./common-style.css";
 import PropTypes from "prop-types";
 import CustomBtn from "./CustomBtn";
 import { motion } from "framer-motion";
@@ -14,21 +15,24 @@ const CustomSection = ({
   children,
   buttonOnClick,
   imageComponent,
-  fullHeight = false
+  fullHeight = false,
+  customClassName,
 }) => {
   return (
-    <section 
-      className="custom-section" 
+    <section
+      className={`custom-section ${customClassName}`}
       style={{
         backgroundColor: backgroundColor || "var(--dark-blue-color)",
         color: textColor || "var(--white-color)",
-        minHeight: fullHeight ? "100vh" : "80vh"
+        minHeight: fullHeight ? "100vh" : "80vh",
       }}
     >
       {!imageOnRight && (
         <motion.div
           className="custom-sec-image custom-image-left"
-          style={{ backgroundColor: imageBackgroundColor || "var(--light-blue-color)" }}
+          style={{
+            backgroundColor: imageBackgroundColor || "var(--light-blue-color)",
+          }}
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -56,7 +60,9 @@ const CustomSection = ({
       {imageOnRight && (
         <motion.div
           className="custom-sec-image"
-          style={{ backgroundColor: imageBackgroundColor || "var(--light-blue-color)" }}
+          style={{
+            backgroundColor: imageBackgroundColor || "var(--light-blue-color)",
+          }}
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -79,7 +85,8 @@ CustomSection.propTypes = {
   imageOnRight: PropTypes.bool,
   children: PropTypes.node,
   imageComponent: PropTypes.node,
-  fullHeight: PropTypes.bool
+  fullHeight: PropTypes.bool,
+  customClassName: PropTypes.string,
 };
 
 export default CustomSection;

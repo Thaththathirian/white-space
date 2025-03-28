@@ -47,9 +47,6 @@
     justify-content: center;
     /* justify-content: flex-start; */
   }
-  .sponsors-title {
-    font-size: 64px;
-  }
   .sponsors-company {
     flex-direction: column;
     align-content: space-between;
@@ -64,16 +61,10 @@
     padding-left: 20px;
     padding-right: 20px;
   }
-  .sponsors-title {
-    font-size: 54px;
-  }
 }
 @media (max-width: 480px) {
   .sponsors {
     height: 810px;
     padding: 80px 16px;
-  }
-  .sponsors-title {
-    font-size: 36px;
   }
 }

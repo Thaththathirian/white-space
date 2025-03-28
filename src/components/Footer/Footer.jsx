@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import "./footer.css";
-import CustomBtn from "../CustomBtn";
+import CustomBtn from "../common/CustomBtn";
 import { IoIosArrowDown } from "react-icons/io";
 import { TfiWorld } from "react-icons/tfi";
 
@@ -73,7 +73,7 @@ const Footer = () => {
 
         {/* Right */}
         <div className="footer-cta">
-          <h3 className="cta-title">Try It Today</h3>
+          <h5 className="cta-title">Try It Today</h5>
           <p className="cta-text">
             Get started for free. Add your whole team as your needs grow.
           </p>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./header.css";
 import { IoIosArrowDown } from "react-icons/io";
-import CustomBtn from "../CustomBtn";
+import CustomBtn from "../common/CustomBtn";
 import { AiOutlineClose } from "react-icons/ai";
 import { FiMenu } from "react-icons/fi";
 
@@ -20,6 +20,7 @@ const Header = () => {
   }, []);
 
   return (
+    <>
     <header className="header">
       <div className="header-left">
         <img src="/assets/logo-icon.png" alt="Logo image" className="logo" />
@@ -60,6 +61,11 @@ const Header = () => {
         </div>
       </div>
     </header>
+
+    {/* spacer div */}
+    <div className="header-spacer" />
+    </>
+
   );
 };
 

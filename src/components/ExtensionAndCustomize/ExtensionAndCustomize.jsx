@@ -1,5 +1,5 @@
 import React from "react";
-import CustomSection from "../CustomSection";
+import CustomSection from "../common/CustomSection";
 
 const ExtensionAndCustomize = () => {
   return (

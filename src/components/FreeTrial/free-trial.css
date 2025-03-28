@@ -12,7 +12,6 @@
   
 }
 .free-trial-title {
-  font-size: clamp(40px, 7vw, 72px);
   width: 600px;
   margin: auto;
 }
