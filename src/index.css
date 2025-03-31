@@ -87,7 +87,7 @@ h6 {
 h1 {
   /* font-size: 4.5rem; */
   /* font-size: 72px; */
-  font-size: clamp(2.25rem, 5vw, 4.5rem);
+  font-size: clamp(2.25rem, 7vw, 4.5rem);
 }
 h2 {
   font-size: 4rem;

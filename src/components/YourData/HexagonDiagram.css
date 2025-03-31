@@ -1,0 +1,213 @@
+/*
+600 * 300
+500 * 250
+450 * 230
+260 * 130
+*/
+:root {
+  --blue-color: rgba(79, 156, 249, 0.5);
+}
+
+
+.half-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: #f5f5f5;
+}
+
+.half-circle {
+  position: relative;
+  width: 500px;
+  height: 250px;
+}
+
+.half-circle-outline {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 250px 250px 0 0;
+  /* background: white; */
+  border: 3px dashed var(--blue-color);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.half-center-rectangle {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  border: 3px dashed var(--blue-color);
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.half-main-logo {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.3rem;
+  border-radius: 5px;
+}
+
+.half-side-icon {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  border: 3px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  bottom: 0;
+  transform: translateY(50%);
+}
+
+.half-left-icon {
+  left: 50px;
+}
+
+.half-right-icon {
+  right: 50px;
+}
+
+.half-diagonal-line {
+  position: absolute;
+  background: #333;
+  height: 2px;
+  z-index: 1;
+}
+
+.half-left-line {
+  width: 140px;
+  bottom: 30px;
+  left: 50%;
+  transform-origin: left bottom;
+  transform: rotate(-30deg) translateX(-100%);
+}
+
+.half-right-line {
+  width: 140px;
+  bottom: 30px;
+  right: 50%;
+  transform-origin: right bottom;
+  transform: rotate(30deg) translateX(100%);
+}
+
+.half-endpoint-icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  border: 2px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.half-left-endpoint {
+  top: 40px;
+  left: 40px;
+}
+
+.half-right-endpoint {
+  top: 40px;
+  right: 40px;
+}
+
+@media (max-width: 768px) {
+  .half-circle {
+    width: 300px;
+    height: 150px;
+  }
+
+  .half-circle-outline {
+    border-radius: 150px 150px 0 0;
+  }
+
+  .half-center-rectangle {
+    width: 80px;
+    height: 50px;
+  }
+
+  .half-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .half-left-icon {
+    left: 30px;
+  }
+
+  .half-right-icon {
+    right: 30px;
+  }
+
+  .half-diagonal-line {
+    width: 110px;
+  }
+
+  .half-endpoint-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .half-left-endpoint {
+    top: 30px;
+    left: 30px;
+  }
+
+  .half-right-endpoint {
+    top: 30px;
+    right: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .half-circle {
+    width: 250px;
+    height: 125px;
+  }
+
+  .half-circle-outline {
+    border-radius: 125px 125px 0 0;
+  }
+
+  .half-diagonal-line {
+    width: 90px;
+  }
+
+  .half-left-icon {
+    left: 20px;
+  }
+
+  .half-right-icon {
+    right: 20px;
+  }
+
+  .half-endpoint-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .half-left-endpoint {
+    top: 25px;
+    left: 20px;
+  }
+
+  .half-right-endpoint {
+    top: 25px;
+    right: 20px;
+  }
+}

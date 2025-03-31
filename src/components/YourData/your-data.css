@@ -1,0 +1,53 @@
+/* @media (max-width: 1152px) {
+  .your-data-image {
+    height: 200px;
+  }
+}
+@media (max-width: 768px) {
+  .your-data {
+    padding-bottom: 0;
+  }
+  .half-circle {
+    height: 100%;
+    width: 100%;
+  }
+} */
+/* Default SVG size (for larger screens) */
+.half-circle {
+  width: clamp(18.125rem, 60vw, 42.5rem);
+  height: clamp(10rem, 40vw, 23.75rem);
+}
+
+@media (max-width: 1152px) {
+  .your-data {
+    flex-direction: column-reverse !important;
+  }
+
+  .your-data .custom-sec-details {
+    order: 2 !important;
+  }
+
+  .your-data .custom-sec-image {
+    order: 1 !important;
+    height: auto; /* Allow SVG to expand */
+  }
+}
+
+/* Make SVG bigger on tablets (768px and below) */
+@media (max-width: 768px) {
+  .your-data {
+    padding-bottom: 0;
+  }
+
+  .half-circle {
+    width: 100% !important; /* Full width of container */
+    height: auto !important; /* Maintain aspect ratio */
+    max-height: 300px; /* Prevent excessive height */
+    min-height: 200px; /* Ensure visibility */
+  }
+
+  .your-data-image { 
+    min-height: 250px; 
+  }
+}
+

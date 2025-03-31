@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import "./pricing.css";
 import debounce from "lodash.debounce";
 import { TiTick } from "react-icons/ti";
 import PaginationDots from "../common/PaginationDots";
-import HighlightedText from "../common/HighlightedText";
+import './pricing.css'
 
 const Pricing = () => {
   const [activeCard, setActiveCard] = useState("Personal");
@@ -99,7 +98,7 @@ const Pricing = () => {
     }
   };
 
-  // swipe
+  // Touch handling for swipe gestures
   const handleTouchStart = (e) => {
     setTouchStart(e.targetTouches[0].clientX);
   };
@@ -118,6 +117,19 @@ const Pricing = () => {
     }
   };
 
+  const getSliderTransform = () => {
+    if (windowWidth <= 480) {
+      // Full width cards
+      return `translateX(-${currentSlide * 100}%)`;
+    } else if (windowWidth <= 768) {
+      // Carousel style with partial side cards
+      return `translateX(calc(-${currentSlide * 100}% + ${
+        currentSlide === 0 ? 10 : currentSlide === 2 ? -10 : 0
+      }%))`;
+    }
+    return "none"; // No transform for larger screens
+  };
+
   return (
     <section className="pricing-section">
       <motion.div
@@ -126,7 +138,9 @@ const Pricing = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
       >
-        <h1>Choose <HighlightedText>Your Plan</HighlightedText></h1>
+        <h1>
+          Choose <span className="highlight">Your Plan</span>
+        </h1>
         <p>
           Whether you want to get organized, keep your personal life on track,
           or boost workplace productivity, we have the right plan for you.
@@ -143,12 +157,7 @@ const Pricing = () => {
           className="pricing-grid"
           ref={sliderRef}
           style={{
-            transform:
-              windowWidth <= 768
-                ? `translateX(calc(-${currentSlide * 100}% - ${
-                    currentSlide * 1.5
-                  }rem))`
-                : "none",
+            transform: windowWidth <= 768 ? getSliderTransform() : "none",
           }}
         >
           {plans.map((plan, index) => (
@@ -163,17 +172,21 @@ const Pricing = () => {
                 y: 0,
                 zIndex: activeCard === plan.id ? 2 : 1,
               }}
-              transition={{ duration: 0.3, }}
+              transition={{ duration: 0.3 }}
               onMouseEnter={() => windowWidth > 768 && setActiveCard(plan.id)}
               onMouseLeave={() =>
                 windowWidth > 768 && setActiveCard("Personal")
               }
               onClick={() => handleCardClick(index, plan.id)}
-              whileHover={windowWidth > 768 ? { 
-                scale: activeCard === plan.id ? 1.02 : 1.01,
-                boxShadow: "0 10px 20px rgba(0,0,0,0.1)"
-              } : {}}
-              whileTap={windowWidth <= 768 ? { scale: 0.98 } : {scale: 0.99}}
+              whileHover={
+                windowWidth > 768
+                  ? {
+                      scale: activeCard === plan.id ? 1.02 : 1.01,
+                      boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
+                    }
+                  : {}
+              }
+              whileTap={windowWidth <= 768 ? { scale: 0.98 } : { scale: 0.99 }}
             >
               <p className="plan-name">{plan.name}</p>
               <motion.h4
@@ -203,7 +216,7 @@ const Pricing = () => {
         </div>
       </div>
 
-      {/* pagination*/}
+      {/* Pagination dots for mobile view */}
       {windowWidth <= 480 && (
         <PaginationDots
           totalSlides={plans.length}

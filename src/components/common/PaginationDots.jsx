@@ -7,7 +7,7 @@ const PaginationDots = ({
   onDotClick,
   activeColor = "var(--dark-blue-color)",
   inactiveColor = "var(--light-blue-color)",
-  dotSize = "10px",
+  dotSize = "14px",
   className = "",
 }) => {
   return (

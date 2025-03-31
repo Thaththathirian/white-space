@@ -34,6 +34,13 @@
   padding: 140px 32px;
   gap: 2rem;
   transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 1 !important;
+}
+.custom-sec-details,
+.custom-sec-image {
+  position: relative;
+  /* z-index: 2;  */
 }
 
 .custom-sec-details {
@@ -42,7 +49,6 @@
   transition: all 0.3s ease-in-out;
 }
 .custom-sec-details h1 {
-  /* font-size: clamp(2.25rem, 6vw, 4rem); */
   line-height: 1.4;
   margin-bottom: 1rem;
   transition: all 0.3s ease-in-out;
@@ -128,6 +134,7 @@
   }
   .custom-sec-image {
     height: clamp(280px, calc(190px + (100vw - 480px) * (180 / 288)), 370px);
+    min-height: 280px;
   }
 }
 
@@ -157,3 +164,74 @@
   padding: 0;
   transition: background-color 0.3s ease;
 }
+
+/* highlighted text */
+/* SketchHighlight.css */
+.sketch-highlight-container {
+  position: relative;
+  display: inline-block;
+}
+
+.sketch-highlight-svg {
+  position: absolute;
+  bottom: 0;
+  left: -2px;
+  right: -2px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.sketch-highlight-svg svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 14px;
+}
+
+.sketch-highlight-text {
+  position: relative;
+  z-index: 10;
+}
+
+/* draft */
+/* responsive-svg-background.css */
+.responsive-svg-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none; /* Allows clicks to pass through to elements below */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.responsive-svg-background svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* spiral */
+.custom-spiral-container {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1 !important;
+}
+
+.custom-spiral {
+  height: auto;
+  position: absolute;
+  object-fit: cover; /* Ensure SVG covers container */
+  /* z-index: 1 !important; */
+  width: 100%;
+  left: -30px;
+}
+
+

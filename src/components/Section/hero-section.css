@@ -1,6 +1,28 @@
+/* hero-section.css */
+.hero-section-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* isolation: isolate; */
+  /* z-index: 1; */
+}
+
+.hero-background-svg {
+  /* Adjust these values as needed to position the SVG properly */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
 .hero-section {
   padding-top: 100px;
   padding-bottom: 100px;
+  position: relative;
+  z-index: 3; /* Ensure content appears above the SVG */
 }
 
 @media (max-width: 480px) {
@@ -8,4 +30,38 @@
     padding-top: 80px;
     padding-bottom: 80px;
   }
+  /* .hero-section-container {
+    height: 810px;
+  } */
+}
+@media (max-width: 320px) {
+  .hero-section {
+    height: 810px;
+
+  }
+  .hero-section-image {
+    min-height: 190px;
+    height: 190px;
+  }
+}
+
+/* spiral */
+.hero-1440 {
+  width: 100%;
+  top: 40%;
+}
+.hero-1152 {
+  top: 40%;
+  left: -75px;
+  width: 110%;
+}
+.hero-768 {
+  left: -55px ;
+  top: 40% ;
+  width: 105%;
+}
+.hero-480 {
+  left: -40px ;
+  top: 5% ;
+  width: 105%;
 }

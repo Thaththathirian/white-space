@@ -1,7 +1,7 @@
 :root {
   --circle-size: min(50vw, 50vh);
-  --min-circle-size: 330px;
-  --dot-size: clamp(25px, 4vw, 35px);
+  --min-circle-size: 300px;
+  --dot-size: clamp(25px, 4vw, 55px);
 }
 
 .dots-circle-container {
@@ -56,9 +56,7 @@
   border: 2px solid white;
 }
 
-
-
-/*  */
+/* circles and logos */
 .circles-container {
   position: relative;
   width: 400px;

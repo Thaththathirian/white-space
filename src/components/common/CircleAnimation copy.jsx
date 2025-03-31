@@ -6,6 +6,7 @@ const CircleAnimation = () => {
   const outerDots = 5;
   const innerRadius = 30;
   const outerRadius = 50;
+
   const logo = "./assets/logo-blue.png";
 
   const generateRandomColors = (count) => {
@@ -19,6 +20,35 @@ const CircleAnimation = () => {
   const [dotSize, setDotSize] = useState(25);
   const [innerDotColors] = useState(generateRandomColors(innerDots));
   const [outerDotColors] = useState(generateRandomColors(outerDots));
+  const [dimensions, setDimensions] = useState({
+    outerDiameter: 260,
+    innerDiameter: 150,
+  });
+
+  useEffect(() => {
+    const updateCircleSizes = () => {
+      // Get current viewport width, clamped between 480 and 1440
+      const viewportWidth = Math.min(Math.max(window.innerWidth, 480), 1440);
+      
+      // Calculate ratio (0 at 480px, 1 at 1440px)
+      const ratio = (viewportWidth - 480) / (1440 - 480);
+      
+      // Calculate diameters
+      const outerDiameter = 260 + (540 - 260) * ratio;
+      const innerDiameter = 150 + (315 - 150) * ratio;
+      
+      setDimensions({ outerDiameter, innerDiameter });
+    };
+
+    // Initial calculation
+    updateCircleSizes();
+    
+    // Add resize listener
+    window.addEventListener('resize', updateCircleSizes);
+    
+    // Cleanup
+    return () => window.removeEventListener('resize', updateCircleSizes);
+  }, []);
 
   useEffect(() => {
     const updateDotSize = () => {
@@ -31,35 +61,39 @@ const CircleAnimation = () => {
     return () => window.removeEventListener("resize", updateDotSize);
   }, []);
 
-  useEffect(() => {});
+  const { outerDiameter, innerDiameter } = dimensions;
+  const center = outerDiameter / 2;
+
 
   return (
     <div className="dots-circle-container">
-      {/* SVG Circles */}
-      <svg className="circle-path" viewBox="0 0 100 100">
-        {/* Inner Circle */}
-        <circle
-          cx="50"
-          cy="50"
-          r={innerRadius}
+       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <svg 
+        width={outerDiameter} 
+        height={outerDiameter} 
+        viewBox={`0 0 ${outerDiameter} ${outerDiameter}`}
+      >
+        {/* Outer circle */}
+        <circle 
+          cx={center}
+          cy={center}
+          r={outerDiameter / 2}
           fill="none"
-          stroke="var(--blue-color)"
-          strokeOpacity="0.7"
-          strokeWidth="0.5"
-          strokeDasharray="3,3"
+          stroke="#3498db"
+          strokeWidth="2"
         />
-        {/* Outer Circle */}
-        <circle
-          cx="50"
-          cy="50"
-          r={outerRadius}
+        
+        {/* Inner circle */}
+        <circle 
+          cx={center}
+          cy={center}
+          r={innerDiameter / 2}
           fill="none"
-          stroke="var(--blue-color)"
-          strokeOpacity="0.7"
-          strokeWidth="0.5"
-          strokeDasharray="3,3"
+          stroke="#e74c3c"
+          strokeWidth="2"
         />
       </svg>
+    </div>
       {/* Centered Logo */}
       <div className="dots-center-logo">
         <img src={logo} alt="Logo" />
@@ -102,7 +136,7 @@ const CircleAnimation = () => {
                 left: `${x}%`,
                 top: `${y}%`,
                 width: `${dotSize}px`,
-                height: ` ${dotSize}px`,
+                height: `${dotSize}px`,
                 background: outerDotColors[index],
                 transform: "translate(-50%, -50%)",
               }}

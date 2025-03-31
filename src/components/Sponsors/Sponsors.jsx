@@ -1,26 +1,29 @@
 import React from "react";
 import "./sponsors.css";
 
-import { FaApple, FaWindows } from "react-icons/fa";
+import { FaApple } from "react-icons/fa";
+import SketchHighlight from "../common/SketchHighlight";
 
 const Sponsors = () => {
   return (
     <div className="sponsors">
-      <h1 className="sponsors-title">Our sponsors</h1>
+      <h1 className="sponsors-title">
+        Our <SketchHighlight>Sponsors</SketchHighlight>
+      </h1>
       <div className="sponsors-company">
         <FaApple className="apple-icon" />
         <img
-          src="/assets/Microsoft.png"
+          src="/assets/Microsoft.svg"
           alt="Microsoft icon"
           className="sponsor-microsoft"
         />
         <img
-          src="/assets/Slack.png"
+          src="/assets/Slack.svg"
           alt="Slack icon"
           className="sponsor-slack"
         />
         <img
-          src="/assets/google.png"
+          src="/assets/Google.svg"
           alt="Google icon"
           className="sponsor-google"
         />

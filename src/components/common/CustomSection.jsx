@@ -17,6 +17,7 @@ const CustomSection = ({
   imageComponent,
   fullHeight = false,
   customClassName,
+  customImageClassName
 }) => {
   return (
     <section
@@ -25,11 +26,12 @@ const CustomSection = ({
         backgroundColor: backgroundColor || "var(--dark-blue-color)",
         color: textColor || "var(--white-color)",
         minHeight: fullHeight ? "100vh" : "80vh",
+        position: 'relative',
       }}
     >
       {!imageOnRight && (
         <motion.div
-          className="custom-sec-image custom-image-left"
+          className={`custom-sec-image custom-image-left ${customImageClassName}`}
           style={{
             backgroundColor: imageBackgroundColor || "var(--light-blue-color)",
           }}
@@ -59,7 +61,7 @@ const CustomSection = ({
 
       {imageOnRight && (
         <motion.div
-          className="custom-sec-image"
+          className={`custom-sec-image ${customImageClassName}`}
           style={{
             backgroundColor: imageBackgroundColor || "var(--light-blue-color)",
           }}

@@ -1,0 +1,113 @@
+/* 580 x 470 */
+/* 530 x 430 */
+/* 480 x 390 */
+/* 280 x 230 */
+
+/* Reset all potential conflicting styles */
+.apps .custom-sec-image {
+  height: auto !important;
+  min-height: unset !important;
+  max-height: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* SVG Container - Critical Fixes */
+.apps-element-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  position: relative;
+}
+
+.apps-element {
+  width: 100%;
+  height: auto;
+  max-width: 580px;
+  max-height: 470px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Large desktop */
+@media (min-width: 1153px) {
+  .apps-element-wrapper {
+    min-height: 470px;
+  }
+}
+
+/* Tablet landscape and smaller desktop */
+@media (max-width: 1152px) {
+  .apps-element-wrapper {
+    min-height: 430px;
+  }
+  
+  .apps-element {
+    max-width: 530px;
+    max-height: 430px;
+  }
+}
+
+/* Tablet portrait */
+@media (max-width: 768px) {
+  .apps-element-wrapper {
+    min-height: 390px;
+    padding: 0;
+  }
+  
+  .apps-element {
+    max-width: 480px;
+    max-height: 390px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .apps-element-wrapper {
+    min-height: 230px;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .apps-element {
+    max-width: 350px;
+    max-height: auto;
+  }
+  .apps {
+    height: 920px;
+  }
+}
+
+@media (max-width: 480px) {
+  .apps {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+}
+
+/* spiral */
+/* .apps-1440 {
+  width: 100%;
+  top: 0;
+  left: -80%;
+  overflow: hidden;
+}
+.apps-1152 {
+  top: 40%;
+  left: -75px;
+  width: 110%;
+}
+.apps-768 {
+  left: -55px ;
+  top: 40% ;
+  width: 105%;
+}
+.apps-480 {
+  left: -40px ;
+  top: 5% ;
+  width: 105%;
+} */
