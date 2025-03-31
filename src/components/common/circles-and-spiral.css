@@ -56,6 +56,17 @@
   border: 2px solid white;
 }
 
+@media (max-width: 360px) {
+  .dots-circle-container,
+  .circle-path,
+  .dots {
+    min-width: 250px;
+    max-height: 250px;
+    width: 250px;
+    height: 250px;
+  }
+}
+
 /* circles and logos */
 .circles-container {
   position: relative;

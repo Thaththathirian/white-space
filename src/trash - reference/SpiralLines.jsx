@@ -19,7 +19,6 @@ const SpiralLines = () => {
         const y = centerY + radius * Math.sin(angle);
         d += `L ${x} ${y} `;
       }
-
       return d;
     };
 

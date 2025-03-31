@@ -1,15 +1,16 @@
 import React from "react";
 import CustomSection from "../common/CustomSection";
-// import HalfCircle from "../../../public/assets/elements/your-data-element.svg";
-// import HalfCircle from "./assets/elements/your-data-element.svg?react";
 import HalfCircle from "../../assets/your-data-element.svg?react";
-import './your-data.css'
+import "./your-data.css";
+
+// highlight
+import DataHighLight1440 from "../../assets/data-high-1440px.svg?react";
 
 const YourData = () => {
   return (
     <>
       <CustomSection
-        title="100% your data"
+        title="100%"
         description="The app is open source and your notes are saved to an open format, so you'll always have access to them. Uses End-To-End Encryption (E2EE) to secure your notes and ensure no-one but yourself can access them."
         buttonText="Read more"
         backgroundColor="var(--white-color)"
@@ -17,9 +18,12 @@ const YourData = () => {
         imageBackgroundColor="var(--white-color)"
         customClassName="your-data"
         customImageClassName="your-data-image"
+
+        highlightTitle="your data"
+        highlightSvg={<DataHighLight1440 className="data-highlight-svg" />}
         imageComponent={
           <HalfCircle
-          className = "half-circle"
+            className="half-circle"
             style={{
               width: "clamp(18.125rem, 60vw, 42.5rem)",
               height: "clamp(10rem, 40vw, 23.75rem)",

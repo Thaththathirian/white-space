@@ -1,0 +1,25 @@
+.extn-highlight-svg {
+  width: 110%; 
+  height: auto; 
+  max-height: 2em; 
+  position: absolute;
+  bottom: 8px; 
+  left: 20px;
+  right: 0;
+  z-index: -1;
+  fill: var(--yellow-color) !important; 
+  pointer-events: none; 
+}
+
+.needs-highlight-svg {
+  width: 110%; 
+  height: auto; 
+  max-height: 2em; 
+  position: absolute;
+  bottom: 10px; 
+  left: 10px;
+  right: 0;
+  z-index: -1;
+  fill: var(--yellow-color) !important; 
+  pointer-events: none; 
+}

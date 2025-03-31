@@ -273,3 +273,27 @@
     justify-items: center;
   }
 }
+
+/* highlight */
+.clients-highlight-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.clients-highlight-text,
+.tetstimonial-title {
+  position: relative;
+  z-index: 2;
+}
+
+.clients-highlight-svg {
+  position: absolute;
+  left: -8px;
+  bottom: -5px;
+  width: 110%;
+  height: auto;
+  max-height: 2em;
+  z-index: 1;
+  fill: var(--yellow-color) !important;
+  pointer-events: none;
+}

@@ -48,3 +48,29 @@
   left: -60% !important;
   top: -60% !important;
 }
+
+/* highlight */
+.project-highlight-svg {
+  width: 110%; 
+  height: auto; 
+  max-height: 1em; 
+  position: absolute;
+  bottom: -5px; 
+  left: 0;
+  right: 0;
+  z-index: -1;
+  fill: var(--yellow-color) !important; 
+  pointer-events: none; 
+}
+.together-highlight-svg {
+  width: 110%; 
+  height: auto; 
+  max-height: 1em; 
+  position: absolute;
+  bottom: 5px; 
+  left: 20px;
+  right: 0;
+  z-index: -1;
+  fill: var(--yellow-color) !important; 
+  pointer-events: none; 
+}

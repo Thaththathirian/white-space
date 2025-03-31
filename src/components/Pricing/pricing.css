@@ -144,11 +144,11 @@
     justify-content: center;
     gap: 1.5rem;
   }
-  
+
   .pricing-card {
     min-height: 580px;
   }
-  
+
   .pricing-card:not(.active) {
     transform: scale(0.95);
     opacity: 0.85;
@@ -185,7 +185,7 @@
     opacity: 0.75;
     transform: scale(0.92);
   }
-  
+
   .pricing-grid-container {
     padding: 0 10px;
   }
@@ -223,7 +223,7 @@
     padding: 1rem 1.5rem;
     font-size: 1.1rem;
   }
-  
+
   /* Add spacing for pagination dots */
   .pricing-section {
     padding-bottom: 4rem;
@@ -250,4 +250,43 @@
 .pagination-dot.active {
   background-color: var(--blue-color);
   transform: scale(1.2);
+}
+
+/* draft */
+.pricing-card.active {
+  background-color: var(--dark-blue-color);
+  color: var(--white-color);
+  transform: scale(1.08); /* Increased size for active card */
+  box-shadow: 0 25px 30px -5px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+  z-index: 3;
+  border: 1px solid transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:not(.active) {
+  transform: scale(0.95); /* Slightly smaller for non-active cards */
+  opacity: 0.85;
+}
+
+/* highlight */
+.pricing-highlight-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.pricing-highlight-text {
+  position: relative;
+  z-index: 2; 
+}
+
+.pricing-highlight-svg {
+  position: absolute;
+  left: 10px;
+  bottom: -5px; 
+  width: 110%;
+  height: auto;
+  max-height: 1.2em;
+  z-index: 1;
+  fill: var(--yellow-color) !important;
+  pointer-events: none;
 }

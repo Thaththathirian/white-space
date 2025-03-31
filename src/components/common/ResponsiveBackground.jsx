@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./common-style.css";
 
-
 const ResponsiveBackground = ({
   svg1440,
   svg1152,
@@ -14,7 +13,6 @@ const ResponsiveBackground = ({
   const [currentSvg, setCurrentSvg] = useState(null);
 
   useEffect(() => {
-    // Function to determine which SVG to display based on viewport width
     const handleResize = () => {
       const width = window.innerWidth;
 
@@ -29,13 +27,10 @@ const ResponsiveBackground = ({
       }
     };
 
-    // Set initial SVG on mount
     handleResize();
 
-    // Add event listener for window resize
     window.addEventListener("resize", handleResize);
 
-    // Clean up event listener on unmount
     return () => window.removeEventListener("resize", handleResize);
   }, [svg1440, svg1152, svg768, svg480]);
 

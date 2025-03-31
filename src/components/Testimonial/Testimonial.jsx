@@ -2,6 +2,9 @@ import React, { useEffect, useState, useRef } from "react";
 import "./testimonial.css";
 import { BiSolidQuoteLeft } from "react-icons/bi";
 
+// highlight
+import ClientsHighLight1440 from "../../assets/clients-high-1440px.svg?react";
+
 const testimonials = [
   {
     comment:
@@ -211,7 +214,13 @@ const Testimonial = () => {
 
   return (
     <div className="testimonial">
-      <h1 className="testimonial-title">What Our Clients Says</h1>
+      <h1 className="tetstimonial-title">
+        What Our Clients
+        <span className="clients-highlight-wrapper">
+          <span className="clients-highlight-text">Says</span>
+          <ClientsHighLight1440 className="clients-highlight-svg" />
+        </span>
+      </h1>
 
       <div className="testimonial-pagination-container">
         <button

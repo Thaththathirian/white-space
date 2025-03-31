@@ -82,3 +82,26 @@
   top: 0;
   object-fit: cover; /* Ensure SVG covers container */
 }
+
+/* highlight */
+.your-work-highlight-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.your-work-highlight-text {
+  position: relative;
+  z-index: 2; 
+}
+
+.your-work-highlight-svg {
+  position: absolute;
+  left: -5px;
+  bottom: 0px; 
+  width: 120%;
+  height: auto;
+  max-height: 1.2em;
+  z-index: 1;
+  fill: var(--yellow-color) !important;
+  pointer-events: none;
+}

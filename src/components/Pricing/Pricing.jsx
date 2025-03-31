@@ -3,7 +3,10 @@ import { motion } from "framer-motion";
 import debounce from "lodash.debounce";
 import { TiTick } from "react-icons/ti";
 import PaginationDots from "../common/PaginationDots";
-import './pricing.css'
+import "./pricing.css";
+
+// highlight
+import PricingHighLight1440 from "../../assets/pricing-high-1440px.svg?react";
 
 const Pricing = () => {
   const [activeCard, setActiveCard] = useState("Personal");
@@ -119,15 +122,14 @@ const Pricing = () => {
 
   const getSliderTransform = () => {
     if (windowWidth <= 480) {
-      // Full width cards
       return `translateX(-${currentSlide * 100}%)`;
     } else if (windowWidth <= 768) {
-      // Carousel style with partial side cards
       return `translateX(calc(-${currentSlide * 100}% + ${
         currentSlide === 0 ? 10 : currentSlide === 2 ? -10 : 0
       }%))`;
+    } else {
+      `translateX(-${currentSlide * 100}%)`;
     }
-    return "none"; // No transform for larger screens
   };
 
   return (
@@ -139,7 +141,11 @@ const Pricing = () => {
         transition={{ duration: 0.4 }}
       >
         <h1>
-          Choose <span className="highlight">Your Plan</span>
+          Choose
+          <span className="pricing-highlight-wrapper">
+            <span className="pricing-highlight-text">Your Plan</span>
+            <PricingHighLight1440 className="pricing-highlight-svg" />
+          </span>
         </h1>
         <p>
           Whether you want to get organized, keep your personal life on track,

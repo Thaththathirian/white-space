@@ -45,7 +45,7 @@
   .apps-element-wrapper {
     min-height: 430px;
   }
-  
+
   .apps-element {
     max-width: 530px;
     max-height: 430px;
@@ -58,7 +58,7 @@
     min-height: 390px;
     padding: 0;
   }
-  
+
   .apps-element {
     max-width: 480px;
     max-height: 390px;
@@ -72,7 +72,7 @@
     padding: 0;
     width: 100%;
   }
-  
+
   .apps-element {
     max-width: 350px;
     max-height: auto;

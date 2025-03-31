@@ -27,7 +27,7 @@ const CustomSpiral = ({
           width: window.innerWidth,
           height: window.innerHeight,
         });
-      }, 100); // 100ms debounce
+      }, 100);
     };
 
     window.addEventListener("resize", handleResize);
@@ -46,7 +46,7 @@ const CustomSpiral = ({
       return <Spiral768 className={`custom-spiral custom-spiral-768 ${spiralClass768}`} />;
     if (windowSize.width <= 480)
       return <Spiral480 className={`custom-spiral custom-spiral-480 ${spiralClass480}`} />;
-    return null; // No spiral for mobile
+    return null; 
   };
   return (
     <div className={`custom-spiral-container ${spiralContainerClass}`}>

@@ -17,7 +17,11 @@ const CustomSection = ({
   imageComponent,
   fullHeight = false,
   customClassName,
-  customImageClassName
+  customImageClassName,
+
+  highlightClassName,
+  highlightTitle,
+  highlightSvg
 }) => {
   return (
     <section
@@ -26,7 +30,7 @@ const CustomSection = ({
         backgroundColor: backgroundColor || "var(--dark-blue-color)",
         color: textColor || "var(--white-color)",
         minHeight: fullHeight ? "100vh" : "80vh",
-        position: 'relative',
+        position: "relative",
       }}
     >
       {!imageOnRight && (
@@ -43,13 +47,16 @@ const CustomSection = ({
         </motion.div>
       )}
 
+
       <motion.div
         className="custom-sec-details"
         initial={{ opacity: 0, x: imageOnRight ? -800 : 800 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.3, delay: 0.1 }}
       >
-        <h1>{title}</h1>
+        <h1>
+          {title} <span className={`custom-highlight ${highlightClassName}`}> {highlightTitle} {highlightSvg}</span>
+        </h1>
         <p>{description}</p>
         {children}
         {buttonText && (
@@ -58,6 +65,7 @@ const CustomSection = ({
           </div>
         )}
       </motion.div>
+
 
       {imageOnRight && (
         <motion.div
